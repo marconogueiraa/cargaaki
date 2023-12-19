@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Fretes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            background-color: rgb(235,30,40);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .filters-container {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 600px;
+            height: 100%;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+
+        .filter-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease-in-out;
+            width: 300px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .card i {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filters-container {
+                max-width: none;
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .main-container {
+                flex-direction: row;
+            }
+
+            .filters-container {
+                max-width: 600px;
+                width: 100%;
+            }
+        }
+
+        .btn-primary {
+            background-color: rgb(235, 30, 40);
+            border-color: rgb(235, 30, 40);
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(200, 25, 35);
+            border-color: rgb(200, 25, 35);
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="navbar">
+        <h2>Carrega Aqui</h2>
+    </div>
+
+    <div class="main-container">
+        <div class="filters-container">
+            <select class="form-select filter-input mb-4" aria-label="Origem">
+                <option value="" selected disabled>Origem</option>
+                <option value="cidade1">Cidade 1</option>
+                <option value="cidade2">Cidade 2</option>
+            </select>
+            <select class="form-select filter-input mb-4" aria-label="Destino">
+                <option value="" selected disabled>Destino</option>
+                <option value="cidadeA">Cidade A</option>
+                <option value="cidadeB">Cidade B</option>
+            </select>
+            <select class="form-select filter-input mb-4" aria-label="Tipo de Veículo">
+                <option value="" selected disabled>Tipo de Veículo</option>
+                <option value="caminhao">Caminhão</option>
+                <option value="carro">Carro</option>
+            </select>
+            <select class="form-select filter-input mb-4" aria-label="Max KM">
+                <option value="" selected disabled>Max KM</option>
+            </select>
+            <button class="btn btn-primary filter-input"><i class="fas fa-search search-icon"></i> Buscar</button>
+        </div>
+
+        <div class="cards-container">
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-box"></i>
+                <h3>Nome da Carga</h3>
+                <p>Origem: Cidade A</p>
+                <p>Destino: Cidade B</p>
+                <p>Tipo de Veículo: Caminhão</p>
+                <p>Valor por KM: R$ 2,50</p>
+                <a href="#">Ver Detalhes</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
