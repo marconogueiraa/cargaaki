@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buena Onda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            background-color: black;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+
+        .navbar-img {
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+            height: auto;
+        }
+
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 80px; 
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            flex: 0 0 calc(30% - 40px);
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                justify-content: center;
+            }
+
+            .card {
+                flex: 0 0 calc(100% - 40px);
+                margin: 10px;
+            }
+        }
+
+        .nav-tabs {
+            overflow-x: auto;
+            flex-wrap: nowrap;
+            background-color: #333;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .nav-link {
+            white-space: nowrap;
+            color: #fff;
+            font-size: 18px;
+            padding: 25px 20px;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+        }
+
+        .nav-link.active {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            color: #333;
+        }
+
+        .tab-content {
+            padding: 20px;
+            margin-top: 150px;
+            width: 100%;
+        }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="fixed-top">
+        <div class="navbar">
+            <img class="navbar-img" src="https://i.imgur.com/IUkhyCV.png" alt="Buena Onda Logo" />
+        </div>
+
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-hamburguer-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-hamburguer" type="button" role="tab" aria-controls="nav-hamburguer"
+                    aria-selected="true">Hamburguer</button>
+
+                <button class="nav-link" id="nav-bebidas-tab" data-bs-toggle="tab" data-bs-target="#nav-bebidas"
+                    type="button" role="tab" aria-controls="nav-bebidas" aria-selected="false">Bebidas</button>
+
+                <button class="nav-link" id="nav-batatas-tab" data-bs-toggle="tab" data-bs-target="#nav-batatas"
+                    type="button" role="tab" aria-controls="nav-batatas" aria-selected="false">Batatas</button>
+
+                <button class="nav-link" id="nav-queijo-tab" data-bs-toggle="tab" data-bs-target="#nav-queijo"
+                    type="button" role="tab" aria-controls="nav-queijo" aria-selected="false">Queijo</button>
+
+                <button class="nav-link" id="nav-petisco-tab" data-bs-toggle="tab" data-bs-target="#nav-petisco"
+                    type="button" role="tab" aria-controls="nav-petisco" aria-selected="false">Petisco</button>
+
+                <button class="nav-link" id="nav-saladas-tab" data-bs-toggle="tab" data-bs-target="#nav-saladas"
+                    type="button" role="tab" aria-controls="nav-saladas" aria-selected="false">Saladas</button>
+
+                <button class="nav-link" id="nav-sobremesas-tab" data-bs-toggle="tab" data-bs-target="#nav-sobremesas"
+                    type="button" role="tab" aria-controls="nav-sobremesas" aria-selected="false">Sobremesas</button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-hamburguer" role="tabpanel" aria-labelledby="nav-hamburguer-tab"
+            tabindex="0">
+
+            <div class="main-container">
+                <div class="card text-center">
+                    <img src="https://churrasco.coz.br/wp-content/uploads/2021/01/hamburguer-na-churrasqueira.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hamburguer Simples</h5>
+                        <p class="card-text">Pao de brioche, alface, cebola roxa e maionese caseira</p>
+                        <a href="#" class="btn btn-primary">R$ 25,99</a>
+                    </div>
+                </div>
+    
+                <div class="card text-center">
+                    <img src="https://churrasco.coz.br/wp-content/uploads/2021/01/hamburguer-gourmet.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hamburguer Duplo</h5>
+                        <p class="card-text">Pao de brioche, alface, cebola roxa e maionese caseira</p>
+                        <a href="#" class="btn btn-primary">R$ 35,99</a>
+                    </div>
+                </div>
+
+                <div class="card text-center">
+                    <img src="https://churrasco.coz.br/wp-content/uploads/2021/01/hamburguer-gourmet.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hamburguer Duplo</h5>
+                        <p class="card-text">Pao de brioche, alface, cebola roxa e maionese caseira</p>
+                        <a href="#" class="btn btn-primary">R$ 35,99</a>
+                    </div>
+                </div>
+
+                <div class="card text-center">
+                    <img src="https://churrasco.coz.br/wp-content/uploads/2021/01/hamburguer-gourmet.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hamburguer Duplo</h5>
+                        <p class="card-text">Pao de brioche, alface, cebola roxa e maionese caseira</p>
+                        <a href="#" class="btn btn-primary">R$ 35,99</a>
+                    </div>
+                </div>
+
+                <div class="card text-center">
+                    <img src="https://churrasco.coz.br/wp-content/uploads/2021/01/hamburguer-gourmet.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hamburguer Duplo</h5>
+                        <p class="card-text">Pao de brioche, alface, cebola roxa e maionese caseira</p>
+                        <a href="#" class="btn btn-primary">R$ 35,99</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ... Outros painéis de guia com cards ... -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

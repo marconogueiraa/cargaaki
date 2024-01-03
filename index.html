@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Empresa</title>
+    <title>Buena Onda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -17,39 +17,66 @@
         }
 
         .navbar {
-            background-color: rgb(235, 30, 40);
+            background-color: rgb(249, 231, 217);
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
             width: 100%;
-            height: 80px;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
         }
 
+        .navbar-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 50%;
+            max-height: 80%;
+            width: 50%;
+            height: auto;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
         .cards-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            margin: 20px;
+            flex-grow: 1;
         }
 
         .card {
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px;
             padding: 20px;
+            margin: 0 0 20px 20px;
             text-align: center;
             cursor: pointer;
             transition: box-shadow 0.3s ease-in-out;
+            width: calc(100% - 20px);
+            max-width: 300px;
         }
 
         .card:hover {
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            max-width: 100%;
+            border-radius: 8px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         a {
@@ -58,51 +85,86 @@
             font-weight: bold;
         }
 
-        .card i {
-            font-size: 36px;
-            margin-bottom: 10px;
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .card {
+                max-width: 100%;
+                margin-left: 0;
+            }
         }
 
-        .search-icon {
-            color: #007BFF;
-        }
-
-        .announce-icon {
-            color: #28A745;
-        }
-
-        .btn-primary {
-            background-color: rgb(235, 30, 40);
-            border-color: rgb(235, 30, 40);
-        }
-
-        .btn-primary:hover {
-            background-color: rgb(200, 25, 35);
-            border-color: rgb(200, 25, 35);
+        @media (min-width: 769px) {
+            .main-container {
+                flex-direction: row;
+            }
         }
     </style>
+
 </head>
 
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <div class="navbar">
-        <h2>Carrega Aqui</h2>
+        <img class="navbar-img"
+            src="https://prainhabuenaonda.com.br/wp-content/uploads/2022/02/versoes-logo-prainha-buena-onda-13-e1644080831265.png" />
     </div>
 
-    <h2 class="text-center mt-4">Vamos lá, o que deseja fazer?</h2>
+    <div class="main-container">
+        <div class="cards-container">
+            <div class="card" onclick="redirectToMenu()">
+                <img class='card-img-top'
+                    src="https://prainhabuenaonda.com.br/wp-content/uploads/2023/02/311293014_191008926665686_4027432100336588037_n.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Acai Beach</h5>
+                    <p class="card-text">Localizado à beira-mar, o Acai Beach oferece uma variedade incrível de pratos
+                        saudáveis e frescos. Desfrute da atmosfera única enquanto saboreia nossas deliciosas opções.</p>
+                </div>
+            </div>
 
-    <div class="cards-container">
-        <div class="card" onclick="window.location.href='search.html'">
-            <i class="fas fa-search search-icon"></i>
-            <a href="search.html">Buscar por fretes</a>
-        </div>
+            <div class="card" onclick="redirectToMenu()">
+                <img class='card-img-top'
+                    src="https://prainhabuenaonda.com.br/wp-content/uploads/2023/02/279480488_3222882571368314_5078595669479836686_n.jpg"
+                    alt="Imagem do Card 1">
+                <div class="card-body">
+                    <h5 class="card-title">Churros Kobori</h5>
+                    <p class="card-text">Churros Kobori é especializado em oferecer churros frescos e deliciosos. Venha
+                        experimentar nossas criações únicas e se deliciar com sabores inigualáveis.</p>
+                </div>
+            </div>
 
-        <div class="card" onclick="window.location.href='announce.html'">
-            <i class="fas fa-bullhorn announce-icon"></i>
-            <a href="announce.html">Anunciar fretes</a>
+            <div class="card" onclick="redirectToMenu()">
+                <img class='card-img-top'
+                    src="https://prainhabuenaonda.com.br/wp-content/uploads/2023/02/301669335_744726406607757_2505832361486886315_n.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Feitoria da Cerveja</h5>
+                    <p class="card-text">Descubra a Feitoria da Cerveja, onde pratos saudáveis encontram a harmonização
+                        perfeita com cervejas artesanais. Uma experiência culinária única.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="redirectToMenu()">
+                <img class='card-img-top'
+                    src="https://prainhabuenaonda.com.br/wp-content/uploads/2023/02/310571013_652385619992983_5530600925388580511_n.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Marie's BBQ Burguer</h5>
+                    <p class="card-text">Marie's BBQ Burguer oferece hambúrgueres suculentos e pratos frescos.
+                        Experimente nosso cardápio diversificado e deixe-se surpreender pelos sabores irresistíveis.</p>
+                </div>
+            </div>
+
         </div>
     </div>
+
+    <script>
+        function redirectToMenu() {
+            window.location.href = 'menu.html';
+        }
+    </script>
 </body>
 
 </html>
