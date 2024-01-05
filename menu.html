@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-
         body {
             font-family: 'Ubuntu', sans-serif;
             margin: 0;
@@ -70,7 +69,8 @@
             flex-wrap: wrap;
             justify-content: space-around;
             padding: 20px;
-            margin-top: 80px;
+            margin-top: 8rem;
+            margin-bottom: 8rem;
         }
 
         .card {
@@ -79,7 +79,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin: 20px;
-            flex: 0 0 calc(30% - 40px);
+            flex: 0 0 calc(20% - 40px);
         }
 
         .card:hover {
@@ -90,6 +90,8 @@
             .main-container {
                 justify-content: center;
                 padding: 0;
+                margin-top: 8rem;
+                margin-bottom: 8rem;
             }
 
             .card {
@@ -121,6 +123,10 @@
 
         .list-group-item {
             margin-bottom: 10px;
+        }
+
+        .btn-close-white {
+            filter: invert(1);
         }
     </style>
 </head>
@@ -163,10 +169,6 @@
     <div id="footerBar" class="fixed-bottom bg-dark text-white text-end p-3 d-md-block d-flex justify-content-between">
         <span>Ver Sacola</span>
         <span>Valor R$ 235,21</span>
-    </div>
-
-    <div class="tab-content" id="nav-tabContent">
-        <!-- ... Conteúdo das abas ... -->
     </div>
 
     <div class="tab-content" id="nav-tabContent">
@@ -304,7 +306,8 @@
     <div class="offcanvas offcanvas-end" tabindex="-1" id="myOffcanvas" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header bg-black text-white">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">Carrinho</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-flex flex-column align-items-center">
             <ul class="list-group">
@@ -319,11 +322,13 @@
                             <p class="mb-1 text-muted fs-6">Pão de brioche, alface, cebola roxa e maionese caseira</p>
                             <div class="d-flex align-items-center">
                                 <div class="input-group input-group-sm">
-                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnMinus">-</button>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnMinus">-</button>
                                     <input type="text" class="form-control text-center" value="1" id="quantity"
                                         readonly>
-                                        <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnPlus">+</button>
-                                    </div>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnPlus">+</button>
+                                </div>
                             </div>
 
                             <p class="mb-0 fs-5 fw-bold text-center">R$ 35,99</p>
@@ -342,11 +347,13 @@
                             <p class="mb-1 text-muted fs-6">Pão de brioche, alface, cebola roxa e maionese caseira</p>
                             <div class="d-flex align-items-center">
                                 <div class="input-group input-group-sm">
-                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnMinus">-</button>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnMinus">-</button>
                                     <input type="text" class="form-control text-center" value="1" id="quantity"
                                         readonly>
-                                        <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnPlus">+</button>
-                                    </div>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnPlus">+</button>
+                                </div>
                             </div>
 
                             <p class="mb-0 fs-5 fw-bold text-center">R$ 35,99</p>
@@ -365,11 +372,13 @@
                             <p class="mb-1 text-muted fs-6">Pão de brioche, alface, cebola roxa e maionese caseira</p>
                             <div class="d-flex align-items-center">
                                 <div class="input-group input-group-sm">
-                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnMinus">-</button>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnMinus">-</button>
                                     <input type="text" class="form-control text-center" value="1" id="quantity"
                                         readonly>
-                                        <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnPlus">+</button>
-                                    </div>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnPlus">+</button>
+                                </div>
                             </div>
 
                             <p class="mb-0 fs-5 fw-bold text-center">R$ 35,99</p>
@@ -388,11 +397,13 @@
                             <p class="mb-1 text-muted fs-6">Pão de brioche, alface, cebola roxa e maionese caseira</p>
                             <div class="d-flex align-items-center">
                                 <div class="input-group input-group-sm">
-                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnMinus">-</button>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnMinus">-</button>
                                     <input type="text" class="form-control text-center" value="1" id="quantity"
                                         readonly>
-                                        <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnPlus">+</button>
-                                    </div>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnPlus">+</button>
+                                </div>
                             </div>
 
                             <p class="mb-0 fs-5 fw-bold text-center">R$ 35,99</p>
@@ -411,11 +422,13 @@
                             <p class="mb-1 text-muted fs-6">Pão de brioche, alface, cebola roxa e maionese caseira</p>
                             <div class="d-flex align-items-center">
                                 <div class="input-group input-group-sm">
-                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnMinus">-</button>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnMinus">-</button>
                                     <input type="text" class="form-control text-center" value="1" id="quantity"
                                         readonly>
-                                        <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnPlus">+</button>
-                                    </div>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnPlus">+</button>
+                                </div>
                             </div>
 
                             <p class="mb-0 fs-5 fw-bold text-center">R$ 35,99</p>
@@ -434,11 +447,13 @@
                             <p class="mb-1 text-muted fs-6">Pão de brioche, alface, cebola roxa e maionese caseira</p>
                             <div class="d-flex align-items-center">
                                 <div class="input-group input-group-sm">
-                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnMinus">-</button>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnMinus">-</button>
                                     <input type="text" class="form-control text-center" value="1" id="quantity"
                                         readonly>
-                                        <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnPlus">+</button>
-                                    </div>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnPlus">+</button>
+                                </div>
                             </div>
 
                             <p class="mb-0 fs-5 fw-bold text-center">R$ 35,99</p>
@@ -457,11 +472,13 @@
                             <p class="mb-1 text-muted fs-6">Pão de brioche, alface, cebola roxa e maionese caseira</p>
                             <div class="d-flex align-items-center">
                                 <div class="input-group input-group-sm">
-                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnMinus">-</button>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnMinus">-</button>
                                     <input type="text" class="form-control text-center" value="1" id="quantity"
                                         readonly>
-                                        <button class="btn btn-dark btn-outline-secondary text-white" type="button" id="btnPlus">+</button>
-                                    </div>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnPlus">+</button>
+                                </div>
                             </div>
 
                             <p class="mb-0 fs-5 fw-bold text-center">R$ 35,99</p>
