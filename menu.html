@@ -140,10 +140,16 @@
 
 
     <div class="fixed-top">
-        <div class="navbar">
-            <img class="navbar-img" src="https://i.imgur.com/IUkhyCV.png" alt="Buena Onda Logo" />
-        </div>
 
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <img class="navbar-img" src="https://i.imgur.com/IUkhyCV.png" alt="Buena Onda Logo 1" />
+                    <img id="go-home" class="navbar-img" style="width: 50%;" src="https://prainhabuenaonda.com.br/wp-content/uploads/2022/02/versoes-logo-prainha-buena-onda-13-e1644080831265.png" alt="Buena Onda Logo 2" />
+                </div>
+            </div>
+        </nav>
+    
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <button class="nav-link active" id="nav-hamburguer-tab" data-bs-toggle="tab"
@@ -420,8 +426,6 @@
     
             <button type="button" class="btn btn-dark btn-lg btn-block w-100">Adicionar R$ 35,99</button>
         </div>
-
-
     </div>
     
 
@@ -431,6 +435,10 @@
 
     <script>
         $(document).ready(function () {
+            $('#go-home').on('click', function () {
+                window.location.href = "index.html"
+            });
+
             $('#footerBar').on('click', function () {
                 $('#myOffcanvas').offcanvas('show');
             });
