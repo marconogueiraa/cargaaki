@@ -98,6 +98,11 @@
                 flex: 0 0 calc(100% - 50px);
                 margin: 10px;
             }
+
+            .card-select-items {
+                margin: 0;
+                padding: 0;
+            }
         }
 
         @media (max-width: 576px) {
@@ -335,9 +340,34 @@
                         </div>
                     </div>
                 </li>
+
+                <li class="list-group-item rounded">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <div class="product-image">
+                            <img src="https://churrasco.coz.br/wp-content/uploads/2021/01/hamburguer-gourmet.jpg"
+                                alt="Product Image" class="img-fluid" style="max-width: 80px; border-radius: 8px;">
+                        </div>
+                        <div class="product-details ms-3">
+                            <h6 class="mb-1 fw-bold">Hamburguer Duplo</h6>
+                            <p class="mb-1 text-muted fs-6">Pão de brioche, alface, cebola roxa e maionese caseira</p>
+                            <div class="d-flex align-items-center">
+                                <div class="input-group input-group-sm">
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnMinus">-</button>
+                                    <input type="text" class="form-control text-center" value="1" id="quantity"
+                                        readonly>
+                                    <button class="btn btn-dark btn-outline-secondary text-white" type="button"
+                                        id="btnPlus">+</button>
+                                </div>
+                            </div>
+
+                            <p class="mb-0 fs-5 fw-bold text-center">R$ 35,99</p>
+                        </div>
+                    </div>
+                </li>
             </ul>
 
-            <button type="button" class="btn btn-dark btn-lg btn-block w-100">Continuar R$250,01</button>
+            <button type="button" id="payment-order" class="btn btn-dark btn-lg btn-block w-100">Continuar R$250,01</button>
         </div>
     </div>
 
@@ -347,15 +377,15 @@
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-flex flex-column align-items-center">
-            <div class="card text-center">
+            <div class="card text-center card-select-items">
                 <img src="https://churrasco.coz.br/wp-content/uploads/2021/01/hamburguer-gourmet.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Hamburguer Duplo</h5>
                     <p class="card-text">Pao de brioche, alface, cebola roxa e maionese caseira</p>
                 </div>
                 
-                <ul class="list-group">
-                    <li class="list-group-item">
+                <ul class="list-group" style=" border: none;">
+                    <li class="list-group-item" style=" border: none;">
                         <div class="mb-3 row">
                             <label class="form-label fw-bold col-12">Ponto da Carne</label>
                             <div class="btn-group col-12">
@@ -376,14 +406,17 @@
                             </div>
                         </div>
                     </li>
+
                     <li class="list-group-item">
                         <div class="mb-3 row">
                             <label class="form-label fw-bold col-12" for="add-instructions">Instruções do Pedido</label>
-                            <textarea class="form-control col-12" id="add-instructions" rows="3" placeholder="Exemplo: sem cebola"></textarea>
+                    <textarea class="form-control col-12" id="add-instructions" rows="3" placeholder="Exemplo: sem cebola"></textarea>
                         </div>
                     </li>
                 </ul>
             </div>
+
+
     
             <button type="button" class="btn btn-dark btn-lg btn-block w-100">Adicionar R$ 35,99</button>
         </div>
@@ -404,6 +437,10 @@
 
             $('.card a').on('click', function () {
                 $('#offCanvasModifierItems').offcanvas('show');
+            });
+
+            $('#payment-order').on('click', function () {
+                window.location.href = "paymentOrder.html"
             });
         });
     </script>
