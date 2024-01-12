@@ -41,13 +41,28 @@
             max-width: 600px;
         }
 
-        .order-status {
+        .order-status-waiting {
             font-size: 2rem;
             font-weight: bold;
             margin-bottom: 20px;
-            color: #007bff;
+            color: #FFD700; 
             text-align: center;
+        }
 
+        .order-status-done {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #32CD32; 
+            text-align: center;
+        }
+
+        .order-status-finished {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #8A2BE2; 
+            text-align: center;
         }
 
         .order-status-label {
@@ -99,17 +114,19 @@
 
     <div class="container order-status-container">
         
-        <div class="order-status-label">Status do Pedido: <div class="order-status">Preparando</div></div>
+        <div class="order-status-label">Status do Pedido: 
+            <div class="order-status-waiting">Preparando</div>
+            <!-- <div class="order-status-done">Concluído</div>
+            <div class="order-status-finished">Finalizado</div> -->
+        </div>
 
-        <div class="order-number">Numero do Pedido: #123456</div>
+        <div class="order-number">Numero do Pedido: #202401151001</div>
 
         <div class="order-details">
-            <p><strong>Data do Pedido:</strong> 10 de janeiro de 2024</p>
             <p><strong>Itens do Pedido:</strong></p>
             <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
+                <li>2X Hamburguer Duplo</li>
+                <li>1X Coca-Cola 2L</li>
             </ul>
             <p><strong>Total:</strong> R$ 150,00</p>
         </div>
